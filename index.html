@@ -13,9 +13,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
 
+    <!-- Preload the background image -->
+    <link rel="preload" href="assets/bg.avif" as="image">
 </head>
 <body>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
     <header>
         <nav>
             <ul>
@@ -31,22 +32,18 @@
 
     <main id="content">
         <section class="hero">
-            <img src="assets/bg.avif" alt="Background Image Developer and Designer" class="responsive">
-            <!-- <div class="container">
-                <div class="centered"><h4>Hello !</h4></div>
-                <div class="heading">
-                    <h1>Welcome to my Website</h1>
-
-                </div> -->
-
-            </div>
+            <div class="image-placeholder" style="width: 100%; height: 300px; background-color: #e0e0e0;"></div>
+            <img src="assets/bg.avif" alt="Background Image Developer and Designer" class="responsive" style="width: 100%; height: auto; display: none;" onload="this.style.display='block'; document.querySelector('.image-placeholder').style.display='none';">
         </section>
        
-            <div class="about">
-               
-                <button type="button" class="btn btn-primary btn-lg">About Me</button>
-            
+        <div class="about">
+            <button type="button" class="btn btn-primary btn-lg">About Me</button>
         </div>
+    </main>
+
+    <!-- Load JavaScript files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+</body>
         
             <p class="paragraph"><h5>
                 
