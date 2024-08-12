@@ -28,37 +28,43 @@
             <p class="contact-description">Fill out the form below and I'll get back to you as soon as possible.</p>
         </div>
 
-        <form class="contact-form" action="" method="post" enctype="multipart/form-data">
+        <form class="contact-form" action="" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
             <div class="form-group-container">
                 <div class="form-group">
                     <label for="name" class="form-label">Name</label>
-                    <input id="name" name="name" class="form-input" placeholder="Your name" type="text" required />
+                    <input id="name" name="name" class="form-input" placeholder="Your name" type="text"  />
+                    <span id="name-error" class="error-message"></span>
                 </div>
                 <div class="form-group">
                     <label for="email" class="form-label">Email</label>
-                    <input id="email" name="email" class="form-input" placeholder="Your email" type="email" required/>
+                    <input id="email" name="email" class="form-input" placeholder="Your email" type="email" />
+                    <span id="email-error" class="error-message"></span>
                 </div>
                 <div class="form-group">
                     <label for="phone" class="form-label">Phone</label>
-                    <input id="phone" name="phone" class="form-input" placeholder="+1 (123) 56789" type="text" required />
+                    <input id="phone" name="phone" class="form-input" placeholder="+1 (123) 56789" type="text"  />
+                    <span id="phone-error" class="error-message"></span>
                 </div>
                 <div class="form-group">
                     <label for="project" class="form-label">Project Requirement</label>
-                    <select id="project" name="project" class="form-select" required>
+                    <select id="project" name="project" class="form-select" >
                         <option value="" disabled selected>Select your project type</option>
                         <option value="Website Development">Website Development</option>
                         <option value="Mobile App Development">Mobile App Development</option>
                         <option value="E-commerce">E-commerce</option>
                         <option value="Other">Other</option>
                     </select>
+                    <span id="project-error" class="error-message"></span>
                 </div>
                 <div class="form-group">
                     <label for="message" class="form-label">Message</label>
-                    <textarea class="form-textarea" id="message" name="message" placeholder="Your message" required></textarea>
+                    <textarea class="form-textarea" id="message" name="message" placeholder="Your message" style="resize: none;" ></textarea>
+                    <span id="message-error" class="error-message"></span>
                 </div>
             </div>
             <button class="form-submit" type="submit">Send Message</button>
         </form>
+        
         <div class="confirmation-message">
             <p>Thank you for your message. I'll get back to you as soon as possible.</p>
         </div>

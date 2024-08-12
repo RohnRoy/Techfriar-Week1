@@ -68,26 +68,30 @@
             <div id="modal" class="modal">
                 <div class="modal-content">
                     <a href="#" class="close-btn">&times;</a>
-                    <form id="hire-me-form">
+                    <form id="hire-me-form" onsubmit="return validateHireForm()">
                         <h2>Contact Me</h2>
                         <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
-                        
+                        <input type="text" id="name" name="name" >
+                        <span id="name-error" class="error-message"></span>
+
                         <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                        
+                        <input type="email" id="email" name="email" >
+                        <span id="email-error" class="error-message"></span>
+
                         <label for="contact-number">Contact Number:</label>
-                        <input type="tel" id="contact-number" name="contact-number" required>
-                        
+                        <input type="tel" id="contact-number" name="contact-number" >
+                        <span id="contact-number-error" class="error-message"></span>
+
                         <label for="project-requirement">Project Requirement:</label>
-                        <select id="project-requirement" name="project-requirement" required>
+                        <select id="project-requirement" name="project-requirement" >
                             <option value="" disabled selected>Select your requirement</option>
                             <option value="web-development">Web Development</option>
                             <option value="mobile-app-development">Mobile App Development</option>
                             <option value="ui-ux-design">UI/UX Design</option>
                             <option value="seo">SEO</option>
                         </select>
-                        
+                        <span id="project-requirement-error" class="error-message"></span>
+
                         <button type="submit" class="btn btn submit">Submit</button>
                     </form>
                 </div>
@@ -98,9 +102,7 @@
     <div class="container aos-init aos-animate" data-aos="zoom-out">
         <div class="row justify-content-center">
             <div class="col-lg-11">
-                <!-- <h2>Rohn Roy</h2> -->
                 <div class="social-links">
-                    <!-- <a href="https://twitter.com/yourprofile" target="_blank"><i class="bi bi-twitter"></i></a> -->
                     <a href="https://github.com" target="_blank"><i class="bi bi-github"></i></a>
                     <a href="https://instagram.com/yourprofile" target="_blank"><i class="bi bi-instagram"></i></a>
                     <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="bi bi-linkedin"></i></a>
@@ -108,7 +110,6 @@
             </div>
         </div>
     </div>
-    
 
     <footer>
         <p>&copy; 2024 Rohn Roy. All rights reserved.</p>
@@ -120,26 +121,5 @@
     </footer>
 
     <script src="scripts.js"></script>
-</body>
-</html>
-
-    
-    <script>
-        // JavaScript to handle the modal functionality
-        document.getElementById('hire-me-btn').addEventListener('click', function() {
-            document.getElementById('modal').style.display = 'block';
-        });
-
-        document.getElementById('close-btn').addEventListener('click', function() {
-            document.getElementById('modal').style.display = 'none';
-        });
-
-        // Close the modal if the user clicks outside of it
-        window.addEventListener('click', function(event) {
-            if (event.target == document.getElementById('modal')) {
-                document.getElementById('modal').style.display = 'none';
-            }
-        });
-    </script>
 </body>
 </html>
